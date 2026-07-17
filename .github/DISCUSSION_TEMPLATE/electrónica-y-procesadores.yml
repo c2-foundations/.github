@@ -1,0 +1,106 @@
+title: "[Electrónica y procesadores] "
+labels:
+  - "lang:es"
+  - "lab:electronics-processors"
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias por participar en C².
+
+        Utiliza este espacio para dudas conceptuales, ayuda con circuitos,
+        comportamientos inesperados o sugerencias del laboratorio.
+
+        **No publiques contraseñas, tokens, datos personales ni vulnerabilidades.**
+        Los informes de seguridad deben seguir la política privada del repositorio
+        `circuit-lab`.
+
+  - type: input
+    id: kind
+    attributes:
+      label: Tipo de consulta
+      description: Escribe Duda, Problema o Sugerencia.
+      placeholder: "Duda"
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Explica tu duda o problema
+      description: Describe qué estás intentando comprender, construir o hacer.
+      placeholder: |
+        Estoy intentando...
+        No entiendo por qué...
+    validations:
+      required: true
+
+  - type: textarea
+    id: tried
+    attributes:
+      label: Qué has probado
+      description: Indica conexiones, medidas, hipótesis o pasos que ya has comprobado.
+      placeholder: |
+        1.
+        2.
+        3.
+
+  - type: textarea
+    id: expected_observed
+    attributes:
+      label: Qué esperabas y qué ocurrió
+      description: Es especialmente útil para comportamientos inesperados.
+      placeholder: |
+        Esperaba:
+        Ocurrió:
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Pasos para reproducirlo
+      description: Si puede ser un problema del Lab, explica cómo llegar al estado observado.
+      placeholder: |
+        1. Abro...
+        2. Conecto...
+        3. Pulso...
+
+  - type: input
+    id: episode
+    attributes:
+      label: Episodio o circuito relacionado
+      description: Se completa automáticamente cuando llegas desde un vídeo o desde el Lab.
+      placeholder: "Episodio 5 · C5b"
+
+  - type: input
+    id: circuit_url
+    attributes:
+      label: Enlace al circuito de partida
+      description: Puede representar el circuito original, no necesariamente tus cambios locales.
+      placeholder: "https://cientosdecimientos.com/..."
+
+  - type: textarea
+    id: technical_context
+    attributes:
+      label: Contexto técnico
+      description: Información añadida por Circuit Lab. Puedes eliminar cualquier dato antes de publicar.
+      render: text
+
+  - type: upload
+    id: attachments
+    attributes:
+      label: Circuito actual, capturas o archivos
+      description: Arrastra aquí el JSON exportado o capturas si son necesarios. Todo lo adjuntado será público.
+    validations:
+      required: false
+      accept: ".json,.png,.jpg,.jpeg,.gif,.svg,.webp"
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmación
+      options:
+        - label: He revisado que no estoy publicando datos personales, secretos ni información de seguridad sensible.
+          required: true
+        - label: Acepto respetar el código de conducta de C².
+          required: true

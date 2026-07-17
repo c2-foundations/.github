@@ -1,0 +1,106 @@
+title: "[Electronics and processors] "
+labels:
+  - "lang:en"
+  - "lab:electronics-processors"
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking part in C².
+
+        Use this space for conceptual questions, circuit help,
+        unexpected behaviour, or suggestions about the laboratory.
+
+        **Do not publish passwords, tokens, personal information, or vulnerabilities.**
+        Security reports must follow the private security policy of the
+        `circuit-lab` repository.
+
+  - type: input
+    id: kind
+    attributes:
+      label: Request type
+      description: Enter Question, Problem, or Suggestion.
+      placeholder: "Question"
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Explain your question or problem
+      description: Describe what you are trying to understand, build, or do.
+      placeholder: |
+        I am trying to...
+        I do not understand why...
+    validations:
+      required: true
+
+  - type: textarea
+    id: tried
+    attributes:
+      label: What you have tried
+      description: Include connections, measurements, hypotheses, or steps you have already checked.
+      placeholder: |
+        1.
+        2.
+        3.
+
+  - type: textarea
+    id: expected_observed
+    attributes:
+      label: What you expected and what happened
+      description: This is especially useful for unexpected behaviour.
+      placeholder: |
+        Expected:
+        Observed:
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: If this may be a Lab problem, explain how to reach the observed state.
+      placeholder: |
+        1. Open...
+        2. Connect...
+        3. Press...
+
+  - type: input
+    id: episode
+    attributes:
+      label: Related episode or circuit
+      description: This is filled automatically when you arrive from a video or the Lab.
+      placeholder: "Episode 5 · C5b"
+
+  - type: input
+    id: circuit_url
+    attributes:
+      label: Starting circuit link
+      description: It may represent the original circuit, not necessarily your local changes.
+      placeholder: "https://countlessconcepts.com/..."
+
+  - type: textarea
+    id: technical_context
+    attributes:
+      label: Technical context
+      description: Information added by Circuit Lab. You may remove any data before publishing.
+      render: text
+
+  - type: upload
+    id: attachments
+    attributes:
+      label: Current circuit, screenshots, or files
+      description: Drag the exported JSON or screenshots here when needed. All attachments will be public.
+    validations:
+      required: false
+      accept: ".json,.png,.jpg,.jpeg,.gif,.svg,.webp"
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      options:
+        - label: I have checked that I am not publishing personal information, secrets, or sensitive security information.
+          required: true
+        - label: I agree to follow the C² code of conduct.
+          required: true
